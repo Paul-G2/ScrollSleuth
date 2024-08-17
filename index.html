@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Scroll Sleuth</title>
+
+		<link rel="icon" type="image/png" href="./src/viewer/appicon.png">
+        <link rel="stylesheet" href="./src/viewer/styles.css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+		<script src="./src/viewer/dependencies/gl-matrix.js"></script>
+		<!-- <script src="./dependencies/biglime.js"></script>
+		<script src="./dependencies/biglime3d.js"></script> -->
+		<script src="./src/viewer/dependencies/biglime-min.js"></script>
+		<script src="./src/viewer/dependencies/biglime3d-min.js"></script>
+		<script src="./src/viewer/dependencies/dexie.js"></script>
+		<script src="./src/viewer/dependencies/UTIF.js"></script>
+
+		<script src="./src/viewer/App.js"></script>
+		<script src="./src/viewer/ControlPanel.js"></script>
+		<script src="./src/viewer/HelpDialog.js"></script>
+		<script src="./src/viewer/MaskFrame.js"></script>
+		<script src="./src/viewer/MockDataLoader.js"></script>
+		<script src="./src/viewer/MprMaskInteractor.js"></script>
+		<script src="./src/viewer/MprRefLineInteractor.js"></script>
+		<script src="./src/viewer/MprViewInteractor.js"></script>
+		<script src="./src/viewer/Presets.js"></script>
+		<script src="./src/viewer/SegmentViewer.js"></script>
+		<script src="./src/viewer/SideMprMaskInteractor.js"></script>
+		<script src="./src/viewer/ThreedRefLineInteractor.js"></script>
+		<script src="./src/viewer/ThreedViewInteractor.js"></script>
+		
+		<script type="text/javascript">    
+            function main() { 
+                const app = new App();
+            }
+        </script>         
+	</head>
+	
+	
+	<body onload="main()">
+		<div id="frame_area">
+			<div id="app_area">
+				<div id="viewer_area"></div>	
+				<div id="controls_area"></div>	
+			</div>	
+		</div>	
+	</body>
+</html>
