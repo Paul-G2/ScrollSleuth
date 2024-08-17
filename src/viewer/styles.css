@@ -1,0 +1,47 @@
+:root {
+    --app-bkgnd: #7092BE;
+    --viewer-bkgnd: #50729E;
+    --app-border: 10px;
+    --panel-width: 350px;
+}
+body {
+    margin: 0;
+    padding: 0;              
+    background-color: var(--app-bkgnd);
+}
+div#frame_area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;  
+    margin: 0;  
+    padding: 0;     
+    overflow: hidden;
+    background: var(--app-bkgnd);
+}
+div#app_area {
+    position: absolute;
+    top: var(--app-border);
+    right: var(--app-border);
+    bottom: var(--app-border);
+    left: var(--app-border);  
+    background: var(--app-bkgnd);
+}
+div#viewer_area {
+    position: absolute;
+    margin: 0;
+    padding: 0;  
+    top: 0px;
+    bottom: 0px; 
+    width: calc(100% - 250px);
+    background: var(--app-bkgnd);
+}
+div#controls_area {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 250px; 
+    background: var(--app-bkgnd);
+}
