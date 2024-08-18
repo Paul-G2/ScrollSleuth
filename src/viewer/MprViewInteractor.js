@@ -14,9 +14,9 @@ class MprViewInteractor extends BigLime.Interactor
     constructor(mprViewer) 
 	{ 
 		// Inherit from Interactor	
-		const wlEventTypes = {btns:0, shift:false, ctrl:false, alt:true,  meta:false};
-		const panEventTypes = {btns:0, shift:false, ctrl:false, alt:false,  meta:false};
-		const zoomEventTypes = {btns:0, shift:true, ctrl:false, alt:false,  meta:false};
+		const wlEventTypes = {btns:0, shift:false, ctrl:false, alt:true};
+		const panEventTypes = {btns:0, shift:false, ctrl:false, alt:false};
+		const zoomEventTypes = {btns:0, shift:true, ctrl:false, alt:false};
 		super(mprViewer.canvas, 'mpr', [].concat(...[wlEventTypes, panEventTypes, zoomEventTypes]));
 
 		// Initialize data members

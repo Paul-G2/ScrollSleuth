@@ -14,7 +14,7 @@ class MprRefLineInteractor extends BigLime.Interactor
     constructor(mprViewer, eventTypes) 
 	{ 
 		// Inherit from Interactor	
-		eventTypes = eventTypes || {btns:0, shift:false, ctrl:true, alt:false,  meta:false};	
+		eventTypes = eventTypes || {btns:0, shift:false, ctrl:true, alt:false};	
 		super(mprViewer.canvas, 'mprRefLine', eventTypes);
 
 		// Initialize data members

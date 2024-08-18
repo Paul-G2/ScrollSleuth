@@ -14,7 +14,7 @@ class ThreedRefLineInteractor extends BigLime.Interactor
     constructor(segViewer, eventTypes) 
 	{ 
 		// Inherit from Interactor	
-		eventTypes = eventTypes || {btns:0, shift:false, ctrl:true, alt:false,  meta:false};	
+		eventTypes = eventTypes || {btns:0, shift:false, ctrl:true, alt:false};	
 		super(segViewer.threedViewer.canvas, '3dRefLine', eventTypes);
 
 		// Add click handler

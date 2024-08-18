@@ -1,6 +1,6 @@
 /**
  * @classdesc
- * This class implements an interactor for adjustin pan, zoom, rotation and lighting
+ * This class implements an interactor for adjusting pan, zoom, rotation and lighting
  * in the 3D viewport.
  * 
  */
@@ -15,10 +15,10 @@ class ThreedViewInteractor extends BigLime.MultiInteractor
 	{ 
 		// Inherit from Interactor
 		eventTypes = eventTypes || 
-			{rot: {btns:0, shift:false, ctrl:false, alt:false, meta:false},
-			pan:  {btns:2, shift:false, ctrl:false, alt:false, meta:false},
-			zoom: {btns:0, shift:true,  ctrl:false, alt:false, meta:false},
-			wl:   {btns:0, shift:false, ctrl:false, alt:true,  meta:false}}	
+			{rot: {btns:0, shift:false, ctrl:false, alt:false},
+			pan:  {btns:2, shift:false, ctrl:false, alt:false},
+			zoom: {btns:0, shift:true,  ctrl:false, alt:false},
+			wl:   {btns:0, shift:false, ctrl:false, alt:true}}	
 	
 		super(segViewer.threedViewer.canvas, '3dView', eventTypes);
 

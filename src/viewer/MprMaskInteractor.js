@@ -14,7 +14,7 @@ class MprMaskInteractor extends BigLime.Interactor
     constructor(mprViewer, eventTypes) 
 	{ 
 		// Inherit from Interactor	
-		eventTypes = eventTypes || {btns:0, shift:false, ctrl:false, alt:false,  meta:false};	
+		eventTypes = eventTypes || {btns:0, shift:false, ctrl:false, alt:false};	
 		super(mprViewer.canvas, 'mprMask', eventTypes);
 
 		// Add click handler
