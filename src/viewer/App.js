@@ -26,5 +26,8 @@ class App
         const frame = document.getElementById('frame_area');
         frame.addEventListener('contextmenu', function(e) {e.preventDefault();} );  
         BigLime.Ui.StyleElement(frame, {userSelect:'none', MsUserSelect:'none', MozUserSelect:'none', WebkitUserSelect:'none'});    
+
+        // Disable elastic scrolling
+        document.body.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive:false});
     }
 };
