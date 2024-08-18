@@ -19,7 +19,7 @@ Main features:
   - displaying volume-rendered images that can accentuate the shape and texture of thicker ink deposits.
 
 - Has a built-in masking tool for isolating single papyrus layers.
-- Requires no installation; it runs in a web browser on any modern device with a GPU.
+- Requires no installation; it runs in a web browser on any computer with a GPU.
 <br/><br/>
 
 Some of these features are similar to, or inspired by, several great projects created by the Vesuvius Challenge community. In particular, you may want to check out: 
@@ -92,7 +92,7 @@ To use Segment Cropper,
 
 - Click "Create Cropped Volume." The cropped volume images that appear in the output directory can then be loaded into Scroll Sleuth. 
 
-A crop size of 1024 x 1024 is probably reasonable for most devices. It can be several times larger if you have a good GPU with lots of video memory. If you see sluggish performance, or you get "context-lost" errors, try a smaller crop size. 
+A crop size of 1024 x 1024 is probably reasonable for most machines. It can be several times larger if you have a good GPU with lots of video memory. If you see sluggish performance, or you get "context-lost" errors, try a smaller crop size. 
 
 
 <br/> <br/> 
