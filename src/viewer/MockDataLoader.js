@@ -14,8 +14,8 @@ class MockDataLoader extends BigLime.Loader3D
 	{ 
         super();
         this.imgBufferArray = null;
-        this.imgWidth = 640;
-        this.imgHeight = 420;
+        this.imgWidth = 256;
+        this.imgHeight = 180;
         this.numImgs = 64;
     };
 
