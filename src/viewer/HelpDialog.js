@@ -66,7 +66,7 @@ class HelpDialog extends BigLime.Dialog
                     </li>
                 </ul>
                 <br />
-                <li>For more information, please visit the <a href="https://github.com/Paul-G2/Scroll-Sleuth" target="_blank" rel="noopener noreferrer">project website</a>.</li>
+                <li>For more information, please visit the <a href="https://github.com/Paul-G2/ScrollSleuth" target="_blank" rel="noopener noreferrer">project website</a>.</li>
             </ul>
             `;
     } 
