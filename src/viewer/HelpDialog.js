@@ -24,9 +24,14 @@ class HelpDialog extends BigLime.Dialog
         
         this.setContent(scrollDiv);
 
-        textDiv.innerHTML =
+        const mobileText = BigLime.Utils.isTouchDevice() ? 
+            `<br/><ul style="list-style-type:none;">
+                <li><b>Note: This app is not designed for mobile devices. Some features work only on desktop/laptop machines.</b></li>
+            </ul><br/>` : '';
+
+        textDiv.innerHTML = mobileText +
             `<ul>
-                <li>For a quick test-drive, you can <text id="load_mock_data" style="color:blue;"><u>click here</u></text> to load an artifical scroll image. Give it a few seconds to appear,
+                <li>For a quick test-drive, you can <text id="load_mock_data" style="color:blue;"><u>click here</u></text> to load an artificial scroll image. Give it a few seconds to appear,
                 then: </li>
                 <br />
                 <ul>
