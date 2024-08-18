@@ -23,7 +23,7 @@ class SegmentViewer
         // Create the app-name text
         this.titleDiv = BigLime.Ui.CreateElement('div', 'appname_div', this.topLeftDiv,
             {width:'100%', height:'70%', display:'flex', alignItems:'center', justifyContent:'center'},
-            {innerHTML:'<pre><p style="font-family:verdana; text-align:center; font-size:20pt"><b>Scroll\nSleuth</b></p>'});  
+            {innerHTML:'<pre><p style="font-family:verdana; text-align:center; font-size:2.5vmin"><b>Scroll\nSleuth</b></p>'});  
         BigLime.Ui.StyleElement(this.topLeftDiv, {backgroundColor:'#90B2DE'})
 
         // Create a rendering engine
@@ -93,10 +93,9 @@ class SegmentViewer
         window.addEventListener('resize', this.resizeListener);    
         this.onResize(true);
 
-
         // Create a help button
         this.helpBtn = BigLime.Ui.CreateElement('button', 'help_btn', this.topLeftDiv,
-            {width:'45%', height:'30px', top:'70%', left:'27.5%', backgroundColor:'#C0D3ED'}, {innerHTML:'Help!'});  
+            {width:'50%', height:'18%', top:'65%', left:'25%', backgroundColor:'#C0D3ED'}, {innerHTML:'Help!'});  
         this.helpBtn.addEventListener('click', function() {
             if ( this.app.helpDialog.isShown() ) {
                 this.app.helpDialog.hide();
