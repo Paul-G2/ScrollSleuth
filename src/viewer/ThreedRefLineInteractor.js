@@ -190,7 +190,7 @@ class ThreedRefLineInteractor extends BigLime.Interactor
 	 */
 	_onClick(event) 
 	{ 
-		if ((event.button !== 0) || !event.ctrlKey || this.moved) { return; } // Must be a ctrl-left click
+		if ((event.button !== 0) || (!event.ctrlKey && !event.metaKey) || this.moved) { return; } // Must be a ctrl-left click
 		event.preventDefault();
 
 		const segViewer = this.segViewer;
