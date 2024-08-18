@@ -27,7 +27,7 @@ class SegmentViewer
         BigLime.Ui.StyleElement(this.topLeftDiv, {backgroundColor:'#90B2DE'})
 
         // Create a rendering engine
-        this.renderEngine = new BigLime.RenderEngine({options:{glVersion:glVersion}});
+        this.renderEngine = new BigLime.RenderEngine({options:{glVersion:glVersion, logErrors:true, logCalls:true}});
         
         // Create the 3D viewer
         this.threedControls = new BigLime.ThreeDControls(document.getElementById('app_area'), this.renderEngine.ctx, 
