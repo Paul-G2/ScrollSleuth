@@ -94,7 +94,7 @@ class MprViewInteractor extends BigLime.Interactor
 		
 		if (this.interactMode != 'none') {
 			event.stopImmediatePropagation(); // Don't send the event to anyone else
-			engine.animate(15, this.segViewer.renderMprs.bind(this.segViewer));
+			///////////////engine.animate(15, this.segViewer.renderMprs.bind(this.segViewer));
 		}
 	}
 
