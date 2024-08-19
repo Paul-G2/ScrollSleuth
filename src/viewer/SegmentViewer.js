@@ -109,7 +109,7 @@ class SegmentViewer
             this.destroy();
             this.app.segViewer = new SegmentViewer(document.getElementById('viewer_area'), this.app);
             this.app.controlPanel.syncWith(this.app.segViewer.threedViewer.renderParams);
-        });
+        }.bind(this));
     }
 
 
