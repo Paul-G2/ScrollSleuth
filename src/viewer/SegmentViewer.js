@@ -27,7 +27,7 @@ class SegmentViewer
         BigLime.Ui.StyleElement(this.topLeftDiv, {backgroundColor:'#90B2DE'})
 
         // Create a rendering engine
-        this.renderEngine = new BigLime.RenderEngine({options:{glVersion:glVersion, logErrors:true, logCalls:true}});
+        this.renderEngine = new BigLime.RenderEngine({options:{glVersion:glVersion}});
         
         // Create the 3D viewer
         this.threedControls = new BigLime.ThreeDControls(document.getElementById('app_area'), this.renderEngine.ctx, 
@@ -102,6 +102,17 @@ class SegmentViewer
             } else {
                 this.app.helpDialog.show();
         }}.bind(this));
+
+        this.renderEngine.canvas.addEventListener("webglcontextlost", function(e) { 
+            e.preventDefault();
+            alert("WebGL context lost. \nPlease try again with a smaller data set."); 
+            this.destroy();
+        });
+        this.renderEngine.canvas.addEventListener("webglcontextrestored", function(e) { 
+            alert("WebGL context restored."); 
+            this.app.segViewer = new SegmentViewer(document.getElementById('viewer_area'), this.app);
+            this.app.controlPanel.syncWith(this.app.segViewer.threedViewer.renderParams);
+        });
     }
 
 
