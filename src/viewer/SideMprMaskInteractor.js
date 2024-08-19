@@ -88,7 +88,7 @@ class SideMprMaskInteractor extends BigLime.Interactor
 		this.interactMode = 'none';
 		
 		segViewer.maskFrame.copyToReliefMask(segViewer.renderEngine.mask);
-		BigLime.Utils.requestAnimFrame( segViewer.renderAll.bind(segViewer) );
+		segViewer.renderAll();
 	}
 
 

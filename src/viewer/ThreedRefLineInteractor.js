@@ -120,7 +120,7 @@ class ThreedRefLineInteractor extends BigLime.Interactor
 		if (this.interactMode == 'none') return;
 
 		this.segViewer.renderEngine.stopAnimation();
-		BigLime.Utils.requestAnimFrame( this.segViewer.renderAll.bind(this.segViewer) ); // Render a full resolution image
+		this.segViewer.renderAll(); // Render a full resolution image
 		this.interactMode = 'none';
 	}
 

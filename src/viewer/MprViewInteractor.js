@@ -159,7 +159,7 @@ class MprViewInteractor extends BigLime.Interactor
 		if (this.interactMode == 'none') return;
 
 		this.segViewer.renderEngine.stopAnimation();
-		BigLime.Utils.requestAnimFrame( this.segViewer.renderMprs.bind(this.segViewer) ); 
+		this.segViewer.renderMprs(); 
 		this.interactMode = 'none';
 	}
 	

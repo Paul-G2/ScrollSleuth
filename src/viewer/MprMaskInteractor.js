@@ -106,7 +106,7 @@ class MprMaskInteractor extends BigLime.Interactor
 		event.stopImmediatePropagation();
 
 		segViewer.maskFrame.copyToReliefMask(segViewer.renderEngine.mask);
-		BigLime.Utils.requestAnimFrame( segViewer.renderAll.bind(segViewer) ); // Render a full resolution image
+		segViewer.renderAll(); // Render a full resolution image
 	}
 
 

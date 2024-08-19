@@ -105,9 +105,11 @@ class SegmentViewer
 
         this.renderEngine.canvas.addEventListener("webglcontextlost", function(e) { 
             e.preventDefault();
-            alert("WebGL context lost."); 
+            alert("WebGL context lost..."); 
+            this.renderEngine.stopAnimation();
         }.bind(this));
         this.renderEngine.canvas.addEventListener("webglcontextrestored", function(e) { 
+            alert('restored');
             this.destroy();
             this.app.segViewer = new SegmentViewer(document.getElementById('viewer_area'), this.app);
             this.app.controlPanel.syncWith(this.app.segViewer.threedViewer.renderParams);

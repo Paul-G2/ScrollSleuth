@@ -129,6 +129,6 @@ class ThreedViewInteractor extends BigLime.MultiInteractor
 		if (this.interactMode == 'none') return;
 
 		this.segViewer.renderEngine.stopAnimation();
-		BigLime.Utils.requestAnimFrame( this.segViewer.renderAll.bind(this.segViewer) ); 
+		this.segViewer.renderAll(); 
 	}
 }
