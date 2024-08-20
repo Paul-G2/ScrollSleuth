@@ -13,7 +13,7 @@ class HelpDialog extends BigLime.Dialog
      */
     constructor(parent) 
     {
-        const height = BigLime.Utils.isTouchDevice() ? '850px' : '740px';
+        const height = BigLime.Utils.isTouchDevice() ? '840px' : '740px';
         super({parent:parent, title:'Help', width:'512px', height:height, borderWidth:4, borderColor:'#ffffff'});
 
         // Content div
@@ -66,8 +66,8 @@ class HelpDialog extends BigLime.Dialog
 
                     <li>Edit the cut-away mask by dragging the yellow control points in the left and top viewports. 
                     <ul>
-                        <li>Add or delete mask points by right-clicking.</li>
-                        <li>If no control points are visible on the current slice, click the <i>Add</i> button to create them.</li>
+                        <li>If no control points are visible, click the <i>Add</i> button to display them.</li>
+                        <li>Add or remove points by right-clicking in the top viewport.</li>
                     </ul>
                     </li>
                 </ul>
