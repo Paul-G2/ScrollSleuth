@@ -48,7 +48,7 @@ class ThreedViewInteractor extends BigLime.MultiInteractor
 			wwl:{width:rp3.winWidth, level:rp3.winLevel, levelRange:engine.volume.getAutoWinLevel()[0]}});
 
 		// Start an animation
-		engine.animate(15, this.segViewer.renderAll.bind(this.segViewer));
+		engine.animate(15, this.segViewer.render3D.bind(this.segViewer));
 	}
 
 
@@ -129,6 +129,6 @@ class ThreedViewInteractor extends BigLime.MultiInteractor
 		if (this.interactMode == 'none') return;
 
 		this.segViewer.renderEngine.stopAnimation();
-		this.segViewer.renderAll(); 
+		this.segViewer.render3D(); 
 	}
 }

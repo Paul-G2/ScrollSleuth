@@ -421,7 +421,7 @@ class ControlPanel
 
         const prevRenderParams = this.app.segViewer.threedViewer.renderParams;
         this.app.segViewer.destroy();
-        const segViewer = this.app.segViewer = new SegmentViewer(document.getElementById('viewer_area'), this.app, 1);
+        const segViewer = this.app.segViewer = new SegmentViewer(document.getElementById('viewer_area'), this.app);
         segViewer.threedViewer.renderParams.updateFrom(prevRenderParams);
         this.syncWith(segViewer.threedViewer.renderParams);
 

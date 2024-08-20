@@ -28,10 +28,12 @@ class SegmentViewer
 
         // Create a rendering engine
         this.renderEngine = new BigLime.RenderEngine({options:{glVersion:glVersion}});
+        this.renderEngine.shadowMapRez = 0.5;
         
         // Create the 3D viewer
         this.threedControls = new BigLime.ThreeDControls(document.getElementById('app_area'), this.renderEngine.ctx, 
             {title: 'VR Settings', minimal:true, borderWidth:1, borderColor:'#000000'});
+        this.threedControls.lightSel.disabled = true;
         const v3d = this.threedViewer = new BigLime.ThreeDViewer( {site:this.threedViewerDiv, 
             renderEngine:this.renderEngine, omitInteractor:true, autoResize:false, controller:this.threedControls});
         v3d.id = 'threed';
@@ -178,6 +180,8 @@ class SegmentViewer
             tv.renderParams.zoom[0] *= tv.calcDefaultZoom() / prevDefaultTopZoom;
             sv.renderParams.zoom[1] *= sv.calcDefaultZoom() / prevDefaultSideZoom;
 
+            this.renderEngine.sizeRasterFor(vv.canvas, 1, true);
+
             this.rafId = BigLime.Utils.requestAnimFrame( this.renderAll.bind(this) );
             this.resizeTimerId = null;
         }.bind(this);
@@ -305,8 +309,7 @@ class SegmentViewer
      */
     renderAll()
     {
-        //////this.allViewers.forEach( function(viewer) { viewer.render(); } );
-        this.threedViewer.render();
+        this.allViewers.forEach( function(viewer) { viewer.render(); } );
     }
 
 
@@ -623,7 +626,7 @@ class SegmentViewer
 
         // Render to framebuffer with the current x-ray params
         engine.setRenderParams(rp);
-        engine.sizeRasterToMatch(this.threedViewer.canvas, 1);
+        engine.sizeRasterFor(this.threedViewer.canvas, 1);
         engine.render();
 
         // Read the rendered pixel values from the framebuffer
