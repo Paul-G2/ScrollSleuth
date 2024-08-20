@@ -32,7 +32,7 @@ class HelpDialog extends BigLime.Dialog
 
         textDiv.innerHTML = mobileText +
             `<ul>
-                <li>For a quick test-drive, you can <text id="load_mock_data" style="color:blue;"><u>click here</u></text> to load an artificial scroll image. Give it a few seconds to appear,
+                <li>For a quick test-drive, you can <text id="load_mock_data" style="color:blue;"><u>click here</u></text> to load an artificial scroll segment. Give it a few seconds to appear,
                 then: </li>
                 <br />
                 <ul>
