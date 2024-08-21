@@ -26,6 +26,7 @@ Some of these features are similar to, or inspired by, several great projects cr
 [&Omega;mit](https://onedrive.live.com/?authkey=%21ALfVTOHQOkbecQ0&id=D6F698278C30CB3E%212310&cid=D6F698278C30CB3E), 
 [Scroll Viewer](https://github.com/lukeboi/scroll-viewer),
 [visual-volume](https://github.com/pocper1/visual-volume),
+[Crackle Viewer](https://github.com/schillij95/Crackle-Viewer),
 and [khartes](https://github.com/KhartesViewer/khartes).
 <br/><br/><br/>
 
