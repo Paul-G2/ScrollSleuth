@@ -26,9 +26,11 @@ class HelpDialog extends BigLime.Dialog
         this.setContent(scrollDiv);
 
         const mobileText = BigLime.Utils.isTouchDevice() ? 
-            `<br/><ul style="list-style-type:none;">
-                <li><b>Note: This app is not designed for mobile devices. Some features work only on desktop/laptop machines.</b></li>
-            </ul><br/>` : '';
+            `
+            <ul style="list-style-type:none;">
+                <li><b>Note: This app is not designed for mobile devices. Some features only work on desktop/laptop machines.</b></li>
+            </ul>
+            ` : '';
 
         textDiv.innerHTML = mobileText +
             `<ul>
