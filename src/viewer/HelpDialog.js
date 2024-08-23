@@ -13,7 +13,7 @@ class HelpDialog extends BigLime.Dialog
      */
     constructor(parent) 
     {
-        const height = BigLime.Utils.isTouchDevice() ? '840px' : '740px';
+        const height = BigLime.Utils.isTouchDevice() ? '855px' : '740px';
         super({parent:parent, title:'Help', width:'512px', height:height, borderWidth:4, borderColor:'#ffffff'});
 
         // Content div
