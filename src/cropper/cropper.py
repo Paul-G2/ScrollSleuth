@@ -45,7 +45,7 @@ def process_input_dir(selected_dir, wait_messagebox):
         out_dir_label.config(text=out_dir)
 
         # Get the mid-stack image and cache its dimensions
-        in_img_names = sorted([fname for fname in os.listdir(in_dir) if '.tif' in fname], reverse=True)
+        in_img_names = sorted([fname for fname in os.listdir(in_dir) if '.tif' in fname], reverse=False)
         num_in_imgs = len(in_img_names)
         mid_img = io.imread(os.path.join(in_dir, in_img_names[num_in_imgs // 2]))
         h, w = mid_img.shape
@@ -122,7 +122,7 @@ def on_create_btn_click():
     left = int(left_val.get())
     top = int(top_val.get())
     if reverse_sort_val.get():
-        in_img_names.sort(reverse=False)
+        in_img_names.sort(reverse=True)
     crop_id_str = ('L' + str(left) + '_T' + str(top) + '_R' + str(right) + '_B' +
         str(bottom) + '_D' + str(xy_downsamp) + '_' + str(z_downsamp))
     out_img_dir = os.path.join(out_dir, crop_id_str)
