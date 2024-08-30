@@ -363,7 +363,7 @@ class ControlPanel
 
             // Get an appropriate loader
             const loader = (imgFiles[0].name.toLowerCase().endsWith('.nrrd')) ? new BigLime.NrrdLoader3D() : 
-                new BigLime.TiffLoader3D([[65000, 'area_txt'], [65001, 'crop_id'], [65002, 'seg_id']]); 
+                new BigLime.TiffLoader3D( {reverseSort:true, extraAttrs:[[65000, 'area_txt'], [65001, 'crop_id'], [65002, 'seg_id']]} ); 
 
             // Preliminary check of the image dimensions
             let imgDims;
