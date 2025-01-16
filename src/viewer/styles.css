@@ -33,7 +33,7 @@ div#viewer_area {
     padding: 0;  
     top: 0px;
     bottom: 0px; 
-    width: calc(100% - 66mm);
+    width: calc(100% - 250px);
     background: var(--app-bkgnd);
 }
 div#controls_area {
@@ -43,6 +43,6 @@ div#controls_area {
     top: 0px;
     bottom: 0px;
     right: 0px;
-    width: 66mm; 
+    width: 250px; 
     background: var(--app-bkgnd);
 }
